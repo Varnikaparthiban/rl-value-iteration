@@ -38,11 +38,14 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
 
 ## OUTPUT:
 ## optimal policy
-![alt text](image.png)
+<img width="437" height="127" alt="image" src="https://github.com/user-attachments/assets/23b3770a-3af2-40c7-85be-fb21653b3a8f" />
+
 ## optimal value function 
-![alt text](image-1.png)
-## success rate for the optimal policy.
-![alt text](image-2.png)
+<img width="561" height="30" alt="image" src="https://github.com/user-attachments/assets/ea658392-2771-411b-9040-1b665f4c376e" />
+
+## success rate for the optimal policy
+<img width="396" height="103" alt="image" src="https://github.com/user-attachments/assets/1e03e5d3-9bd5-4415-9a88-024c9294213e" />
+
 
 ## RESULT:
 
