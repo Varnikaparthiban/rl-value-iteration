@@ -7,18 +7,25 @@ Implement value iteration algorithm to find optimal policy for the altered froze
 The OpenAI Gym FrozenLake environment is a gridworld problem where an agent navigates a slippery frozen surface to reach the goal state while avoiding holes, and the fenced boundaries prevent the agent from leaving the grid. In this modified FrozenLake environment, alterations such as changing the starting state, goal state, and hole positions are made, and the optimal policy is then determined using the value iteration algorithm
 
 ## VALUE ITERATION ALGORITHM
-# Step 1:
+### Step 1:
 Import required libraries for the program.
-# Step 2:
+### Step 2:
 Load the frozen lake environment and make changes. 
-# Step 3: 
+### Step 3: 
 Define the value iteration function.
-# Step 4:
+### Step 4:
 Run the function and display the results.
 
 ## VALUE ITERATION FUNCTION
 ### Name: VARNIKA P
 ### Register Number: 212223240170
+```
+envdesc=['HGFF','FFHF','FFFF','HHFS']
+env = gym.make('FrozenLake-v1',desc=envdesc)
+init_state = env.reset()
+goal_state = 1
+P = env.env.P
+```
 ```PYTHON
 def value_iteration(P, gamma=1.0, theta=1e-10):
     V = np.zeros(len(P), dtype=np.float64)
@@ -34,16 +41,20 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
     pi=lambda s: {s:a for s,a in enumerate(np.argmax(Q,axis=1))}[s]
     return V, pi
 ```
-
+```
+print('Reaches goal {:.2f}%. Obtains an average undiscounted return of {:.4f}.'.format(
+    probability_success(env, pi_best_v, goal_state=goal_state)*100,
+    mean_return(env, pi_best_v)))
+```
 ## OUTPUT:
 ## optimal policy
 <img width="437" height="127" alt="image" src="https://github.com/user-attachments/assets/23b3770a-3af2-40c7-85be-fb21653b3a8f" />
 
 ## optimal value function 
-<img width="561" height="30" alt="image" src="https://github.com/user-attachments/assets/ea658392-2771-411b-9040-1b665f4c376e" />
+<img width="396" height="103" alt="image" src="https://github.com/user-attachments/assets/1e03e5d3-9bd5-4415-9a88-024c9294213e" />
 
 ## success rate for the optimal policy
-<img width="396" height="103" alt="image" src="https://github.com/user-attachments/assets/1e03e5d3-9bd5-4415-9a88-024c9294213e" />
+<img width="561" height="30" alt="image" src="https://github.com/user-attachments/assets/ea658392-2771-411b-9040-1b665f4c376e" />
 
 
 ## RESULT:
