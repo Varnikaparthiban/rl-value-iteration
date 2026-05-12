@@ -19,7 +19,7 @@ Run the function and display the results.
 ## VALUE ITERATION FUNCTION
 ### Name: VARNIKA P
 ### Register Number: 212223240170
-```
+```PYTHON
 envdesc=['HGFF','FFHF','FFFF','HHFS']
 env = gym.make('FrozenLake-v1',desc=envdesc)
 init_state = env.reset()
@@ -41,7 +41,7 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
     pi=lambda s: {s:a for s,a in enumerate(np.argmax(Q,axis=1))}[s]
     return V, pi
 ```
-```
+```PYTHON
 print('Reaches goal {:.2f}%. Obtains an average undiscounted return of {:.4f}.'.format(
     probability_success(env, pi_best_v, goal_state=goal_state)*100,
     mean_return(env, pi_best_v)))
