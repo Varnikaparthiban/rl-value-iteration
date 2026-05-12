@@ -4,8 +4,7 @@
 Implement value iteration algorithm to find optimal policy for the altered frozen lake environment.
 
 ## PROBLEM STATEMENT
-Make an alterations in the default frozen lake environment like changing the starting state, goal state and holes in the environment. Further find optimal policy using value iteration.
-
+The OpenAI Gym FrozenLake environment is a gridworld problem where an agent navigates a slippery frozen surface to reach the goal state while avoiding holes, and the fenced boundaries prevent the agent from leaving the grid. In this modified FrozenLake environment, alterations such as changing the starting state, goal state, and hole positions are made, and the optimal policy is then determined using the value iteration algorithm
 
 ## VALUE ITERATION ALGORITHM
 # Step 1:
